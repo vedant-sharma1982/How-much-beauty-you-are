@@ -1,0 +1,138 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Percentage Detector</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec;
+            padding: 20px;
+        }
+        #image-preview {
+            max-width: 300px;
+            margin-top: 20px;
+            display: none;
+        }
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <h1>How Beautiful Are You?</h1>
+    <input type="file" id="image-upload" accept="image/*">
+    <br>
+    <img id="image-preview" alt="Uploaded Image">
+    <br>
+    <button onclick="calculateBeauty()">Check Beauty Percentage</button>
+    <div id="result"></div>
+    
+    <script>
+        document.getElementById('image-upload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('image-preview').src = e.target.result;
+                    document.getElementById('image-preview').style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        function calculateBeauty() {
+            const beautyScore = Math.floor(Math.random() * 101);
+            document.getElementById('result').innerText = `Your Beauty Score: ${beautyScore}%`;
+        }
+    </script>
+</body>
+</html>
+
+I've created a simple fun-based beauty percentage website where users can upload an image and get a randomly generated beauty score. Let me know if you want any design changes or additional features!
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Percentage Detector</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec;
+            padding: 20px;
+        }
+        #image-preview {
+            max-width: 300px;
+            margin-top: 20px;
+            display: none;
+        }
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <h1>How Beautiful Are You?</h1>
+    <input type="file" id="image-upload" accept="image/*">
+    <br>
+    <img id="image-preview" alt="Uploaded Image">
+    <br>
+    <button onclick="calculateBeauty()">Check Beauty Percentage</button>
+    <div id="result"></div>
+    
+    <script>
+        document.getElementById('image-upload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('image-preview').src = e.target.result;
+                    document.getElementById('image-preview').style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        function calculateBeauty() {
+            const beautyScore = Math.floor(Math.random() * 101);
+            document.getElementById('result').innerText = `Your Beauty Score: ${beautyScore}%`;
+        }
+    </script>
+</body>
+</html>
+
+
+I've created a simple fun-based beauty percentage website where users can upload an image and get a randomly generated beauty score. Let me know if you want any design changes or additional features!
